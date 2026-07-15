@@ -25,7 +25,9 @@ function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
       <header className="border-b border-neutral-200 dark:border-neutral-800 px-6 py-4">
-        <h1 className="text-xl font-semibold">SHQR Bench</h1>
+        <h1 className="text-xl font-semibold">
+          SHQR Bench <span className="font-normal text-neutral-400">(Structured Handwritten Questionnaire Recognition)</span>
+        </h1>
         <p className="text-sm text-neutral-500 dark:text-neutral-400">
           Questionnaire OCR/extraction benchmark results across models
         </p>
