@@ -59,6 +59,7 @@ export function CostVsScoreScatter({ rows }: Props) {
           />
           <ZAxis range={[220, 220]} />
           <Tooltip
+            isAnimationActive={false}
             cursor={{ strokeDasharray: '3 3' }}
             formatter={(value, name) => (name === 'Cost per Paper' ? `$${Number(value).toFixed(4)}` : Number(value).toFixed(4))}
             labelFormatter={() => ''}
