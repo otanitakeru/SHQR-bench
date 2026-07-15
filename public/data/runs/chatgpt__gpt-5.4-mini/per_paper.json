@@ -1,0 +1,1922 @@
+[
+  {
+    "paper_id": 1,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.4591,
+      "numerator": 14.6917,
+      "denominator": 32
+    },
+    "work_cer": {
+      "ref_len": 431,
+      "errors": 263,
+      "sub": 45,
+      "del": 162,
+      "ins": 56,
+      "cer_percent": 61.02
+    },
+    "work_cer_rescored": {
+      "ref_len": 431,
+      "errors": 260,
+      "sub": 42,
+      "del": 162,
+      "ins": 56,
+      "cer_percent": 60.32
+    },
+    "concat_cer": {
+      "ref_len": 431,
+      "errors": 190,
+      "sub": 58,
+      "del": 119,
+      "ins": 13,
+      "cer_percent": 44.08
+    },
+    "concat_cer_rescored": {
+      "ref_len": 431,
+      "errors": 187,
+      "sub": 55,
+      "del": 119,
+      "ins": 13,
+      "cer_percent": 43.39
+    },
+    "numbers": {
+      "tp": 19,
+      "fp": 1,
+      "fn": 12,
+      "precision": 0.95,
+      "recall": 0.6129,
+      "f1": 0.7451,
+      "entries": 19,
+      "entry_exact": 19,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 1,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 699,
+      "elapsed_seconds": 8.05
+    }
+  },
+  {
+    "paper_id": 2,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9011,
+      "numerator": 5.4064,
+      "denominator": 6
+    },
+    "work_cer": {
+      "ref_len": 103,
+      "errors": 15,
+      "sub": 9,
+      "del": 2,
+      "ins": 4,
+      "cer_percent": 14.56
+    },
+    "work_cer_rescored": {
+      "ref_len": 103,
+      "errors": 15,
+      "sub": 9,
+      "del": 2,
+      "ins": 4,
+      "cer_percent": 14.56
+    },
+    "concat_cer": {
+      "ref_len": 103,
+      "errors": 15,
+      "sub": 9,
+      "del": 2,
+      "ins": 4,
+      "cer_percent": 14.56
+    },
+    "concat_cer_rescored": {
+      "ref_len": 103,
+      "errors": 15,
+      "sub": 9,
+      "del": 2,
+      "ins": 4,
+      "cer_percent": 14.56
+    },
+    "numbers": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 5,
+      "entry_exact": 5,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 208,
+      "elapsed_seconds": 3.28
+    }
+  },
+  {
+    "paper_id": 3,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.4349,
+      "numerator": 15.656,
+      "denominator": 36
+    },
+    "work_cer": {
+      "ref_len": 911,
+      "errors": 583,
+      "sub": 180,
+      "del": 277,
+      "ins": 126,
+      "cer_percent": 64
+    },
+    "work_cer_rescored": {
+      "ref_len": 911,
+      "errors": 580,
+      "sub": 178,
+      "del": 276,
+      "ins": 126,
+      "cer_percent": 63.67
+    },
+    "concat_cer": {
+      "ref_len": 911,
+      "errors": 439,
+      "sub": 228,
+      "del": 181,
+      "ins": 30,
+      "cer_percent": 48.19
+    },
+    "concat_cer_rescored": {
+      "ref_len": 911,
+      "errors": 436,
+      "sub": 226,
+      "del": 180,
+      "ins": 30,
+      "cer_percent": 47.86
+    },
+    "numbers": {
+      "tp": 30,
+      "fp": 6,
+      "fn": 6,
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "f1": 0.8333,
+      "entries": 29,
+      "entry_exact": 29,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 1,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 1072,
+      "elapsed_seconds": 9.74
+    }
+  },
+  {
+    "paper_id": 4,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9804,
+      "numerator": 1.9608,
+      "denominator": 2
+    },
+    "work_cer": {
+      "ref_len": 50,
+      "errors": 2,
+      "sub": 1,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 4
+    },
+    "work_cer_rescored": {
+      "ref_len": 50,
+      "errors": 2,
+      "sub": 1,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 4
+    },
+    "concat_cer": {
+      "ref_len": 50,
+      "errors": 2,
+      "sub": 1,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 4
+    },
+    "concat_cer_rescored": {
+      "ref_len": 50,
+      "errors": 2,
+      "sub": 1,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 4
+    },
+    "numbers": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 1,
+      "entry_exact": 1,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 127,
+      "elapsed_seconds": 3.55
+    }
+  },
+  {
+    "paper_id": 5,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9425,
+      "numerator": 3.7698,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 143,
+      "errors": 5,
+      "sub": 3,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 3.5
+    },
+    "work_cer_rescored": {
+      "ref_len": 143,
+      "errors": 4,
+      "sub": 2,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 2.8
+    },
+    "concat_cer": {
+      "ref_len": 143,
+      "errors": 5,
+      "sub": 3,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 3.5
+    },
+    "concat_cer_rescored": {
+      "ref_len": 143,
+      "errors": 4,
+      "sub": 2,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 2.8
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 326,
+      "elapsed_seconds": 4.32
+    }
+  },
+  {
+    "paper_id": 6,
+    "status": "ok",
+    "entry_score": {
+      "score": 1,
+      "numerator": 3,
+      "denominator": 3
+    },
+    "work_cer": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 51,
+      "elapsed_seconds": 4.35
+    }
+  },
+  {
+    "paper_id": 7,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9828,
+      "numerator": 13.7591,
+      "denominator": 14
+    },
+    "work_cer": {
+      "ref_len": 271,
+      "errors": 7,
+      "sub": 3,
+      "del": 1,
+      "ins": 3,
+      "cer_percent": 2.58
+    },
+    "work_cer_rescored": {
+      "ref_len": 271,
+      "errors": 7,
+      "sub": 3,
+      "del": 1,
+      "ins": 3,
+      "cer_percent": 2.58
+    },
+    "concat_cer": {
+      "ref_len": 271,
+      "errors": 7,
+      "sub": 3,
+      "del": 1,
+      "ins": 3,
+      "cer_percent": 2.58
+    },
+    "concat_cer_rescored": {
+      "ref_len": 271,
+      "errors": 7,
+      "sub": 3,
+      "del": 1,
+      "ins": 3,
+      "cer_percent": 2.58
+    },
+    "numbers": {
+      "tp": 13,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 13,
+      "entry_exact": 13,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 394,
+      "elapsed_seconds": 4.54
+    }
+  },
+  {
+    "paper_id": 8,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.4523,
+      "numerator": 3.6181,
+      "denominator": 8
+    },
+    "work_cer": {
+      "ref_len": 236,
+      "errors": 171,
+      "sub": 16,
+      "del": 94,
+      "ins": 61,
+      "cer_percent": 72.46
+    },
+    "work_cer_rescored": {
+      "ref_len": 236,
+      "errors": 171,
+      "sub": 16,
+      "del": 94,
+      "ins": 61,
+      "cer_percent": 72.46
+    },
+    "concat_cer": {
+      "ref_len": 236,
+      "errors": 81,
+      "sub": 28,
+      "del": 43,
+      "ins": 10,
+      "cer_percent": 34.32
+    },
+    "concat_cer_rescored": {
+      "ref_len": 236,
+      "errors": 81,
+      "sub": 28,
+      "del": 43,
+      "ins": 10,
+      "cer_percent": 34.32
+    },
+    "numbers": {
+      "tp": 4,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5,
+      "entries": 5,
+      "entry_exact": 3,
+      "entry_exact_rate": 0.6,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 2,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 327,
+      "elapsed_seconds": 4.36
+    }
+  },
+  {
+    "paper_id": 9,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.7492,
+      "numerator": 3.7458,
+      "denominator": 5
+    },
+    "work_cer": {
+      "ref_len": 86,
+      "errors": 8,
+      "sub": 5,
+      "del": 0,
+      "ins": 3,
+      "cer_percent": 9.3
+    },
+    "work_cer_rescored": {
+      "ref_len": 86,
+      "errors": 8,
+      "sub": 5,
+      "del": 0,
+      "ins": 3,
+      "cer_percent": 9.3
+    },
+    "concat_cer": {
+      "ref_len": 86,
+      "errors": 8,
+      "sub": 5,
+      "del": 0,
+      "ins": 3,
+      "cer_percent": 9.3
+    },
+    "concat_cer_rescored": {
+      "ref_len": 86,
+      "errors": 8,
+      "sub": 5,
+      "del": 0,
+      "ins": 3,
+      "cer_percent": 9.3
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 225,
+      "elapsed_seconds": 3.54
+    }
+  },
+  {
+    "paper_id": 10,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.6458,
+      "numerator": 2.5831,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 76,
+      "errors": 22,
+      "sub": 8,
+      "del": 6,
+      "ins": 8,
+      "cer_percent": 28.95
+    },
+    "work_cer_rescored": {
+      "ref_len": 76,
+      "errors": 22,
+      "sub": 8,
+      "del": 6,
+      "ins": 8,
+      "cer_percent": 28.95
+    },
+    "concat_cer": {
+      "ref_len": 76,
+      "errors": 10,
+      "sub": 8,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 13.16
+    },
+    "concat_cer_rescored": {
+      "ref_len": 76,
+      "errors": 10,
+      "sub": 8,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 13.16
+    },
+    "numbers": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 1,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 214,
+      "elapsed_seconds": 3.48
+    }
+  },
+  {
+    "paper_id": 11,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9231,
+      "numerator": 2.7692,
+      "denominator": 3
+    },
+    "work_cer": {
+      "ref_len": 21,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 14.29
+    },
+    "work_cer_rescored": {
+      "ref_len": 21,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 14.29
+    },
+    "concat_cer": {
+      "ref_len": 21,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 14.29
+    },
+    "concat_cer_rescored": {
+      "ref_len": 21,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 14.29
+    },
+    "numbers": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 97,
+      "elapsed_seconds": 2.71
+    }
+  },
+  {
+    "paper_id": 12,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9497,
+      "numerator": 2.8491,
+      "denominator": 3
+    },
+    "work_cer": {
+      "ref_len": 30,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 30,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 30,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 30,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 109,
+      "elapsed_seconds": 2.6
+    }
+  },
+  {
+    "paper_id": 13,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.8958,
+      "numerator": 3.5833,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 43,
+      "errors": 6,
+      "sub": 6,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 13.95
+    },
+    "work_cer_rescored": {
+      "ref_len": 43,
+      "errors": 6,
+      "sub": 6,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 13.95
+    },
+    "concat_cer": {
+      "ref_len": 43,
+      "errors": 6,
+      "sub": 6,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 13.95
+    },
+    "concat_cer_rescored": {
+      "ref_len": 43,
+      "errors": 6,
+      "sub": 6,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 13.95
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 123,
+      "elapsed_seconds": 2.85
+    }
+  },
+  {
+    "paper_id": 14,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9655,
+      "numerator": 3.8618,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 55,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 5.45
+    },
+    "work_cer_rescored": {
+      "ref_len": 55,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 5.45
+    },
+    "concat_cer": {
+      "ref_len": 55,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 5.45
+    },
+    "concat_cer_rescored": {
+      "ref_len": 55,
+      "errors": 3,
+      "sub": 3,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 5.45
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 143,
+      "elapsed_seconds": 3.27
+    }
+  },
+  {
+    "paper_id": 15,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9533,
+      "numerator": 3.813,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 107,
+      "errors": 13,
+      "sub": 7,
+      "del": 1,
+      "ins": 5,
+      "cer_percent": 12.15
+    },
+    "work_cer_rescored": {
+      "ref_len": 107,
+      "errors": 13,
+      "sub": 7,
+      "del": 1,
+      "ins": 5,
+      "cer_percent": 12.15
+    },
+    "concat_cer": {
+      "ref_len": 107,
+      "errors": 13,
+      "sub": 7,
+      "del": 1,
+      "ins": 5,
+      "cer_percent": 12.15
+    },
+    "concat_cer_rescored": {
+      "ref_len": 107,
+      "errors": 13,
+      "sub": 7,
+      "del": 1,
+      "ins": 5,
+      "cer_percent": 12.15
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 251,
+      "elapsed_seconds": 3.86
+    }
+  },
+  {
+    "paper_id": 16,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.8974,
+      "numerator": 2.6923,
+      "denominator": 3
+    },
+    "work_cer": {
+      "ref_len": 20,
+      "errors": 4,
+      "sub": 2,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 20
+    },
+    "work_cer_rescored": {
+      "ref_len": 20,
+      "errors": 4,
+      "sub": 2,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 20
+    },
+    "concat_cer": {
+      "ref_len": 20,
+      "errors": 4,
+      "sub": 2,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 20
+    },
+    "concat_cer_rescored": {
+      "ref_len": 20,
+      "errors": 4,
+      "sub": 2,
+      "del": 0,
+      "ins": 2,
+      "cer_percent": 20
+    },
+    "numbers": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 71,
+      "elapsed_seconds": 3.47
+    }
+  },
+  {
+    "paper_id": 17,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.97,
+      "numerator": 4.85,
+      "denominator": 5
+    },
+    "work_cer": {
+      "ref_len": 64,
+      "errors": 3,
+      "sub": 1,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 4.69
+    },
+    "work_cer_rescored": {
+      "ref_len": 64,
+      "errors": 3,
+      "sub": 1,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 4.69
+    },
+    "concat_cer": {
+      "ref_len": 64,
+      "errors": 3,
+      "sub": 1,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 4.69
+    },
+    "concat_cer_rescored": {
+      "ref_len": 64,
+      "errors": 3,
+      "sub": 1,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 4.69
+    },
+    "numbers": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 4,
+      "entry_exact": 4,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 154,
+      "elapsed_seconds": 2.86
+    }
+  },
+  {
+    "paper_id": 18,
+    "status": "ok",
+    "entry_score": {
+      "score": 1,
+      "numerator": 2,
+      "denominator": 2
+    },
+    "work_cer": {
+      "ref_len": 33,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 33,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 33,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 33,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 1,
+      "entry_exact": 1,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 92,
+      "elapsed_seconds": 2.52
+    }
+  },
+  {
+    "paper_id": 19,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9205,
+      "numerator": 3.6821,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 48,
+      "errors": 5,
+      "sub": 4,
+      "del": 1,
+      "ins": 0,
+      "cer_percent": 10.42
+    },
+    "work_cer_rescored": {
+      "ref_len": 48,
+      "errors": 5,
+      "sub": 4,
+      "del": 1,
+      "ins": 0,
+      "cer_percent": 10.42
+    },
+    "concat_cer": {
+      "ref_len": 48,
+      "errors": 5,
+      "sub": 4,
+      "del": 1,
+      "ins": 0,
+      "cer_percent": 10.42
+    },
+    "concat_cer_rescored": {
+      "ref_len": 48,
+      "errors": 5,
+      "sub": 4,
+      "del": 1,
+      "ins": 0,
+      "cer_percent": 10.42
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 111,
+      "elapsed_seconds": 2.8
+    }
+  },
+  {
+    "paper_id": 20,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.8844,
+      "numerator": 5.3065,
+      "denominator": 6
+    },
+    "work_cer": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 0,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.8333,
+      "recall": 1,
+      "f1": 0.9091,
+      "entries": 5,
+      "entry_exact": 4,
+      "entry_exact_rate": 0.8,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 117,
+      "elapsed_seconds": 2.58
+    }
+  },
+  {
+    "paper_id": 21,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.75,
+      "numerator": 3,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 17,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 17,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 17,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 17,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1,
+      "recall": 0.6667,
+      "f1": 0.8,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 64,
+      "elapsed_seconds": 2.82
+    }
+  },
+  {
+    "paper_id": 22,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.875,
+      "numerator": 3.5,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 3,
+      "errors": 1,
+      "sub": 1,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 33.33
+    },
+    "work_cer_rescored": {
+      "ref_len": 3,
+      "errors": 1,
+      "sub": 1,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 33.33
+    },
+    "concat_cer": {
+      "ref_len": 3,
+      "errors": 1,
+      "sub": 1,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 33.33
+    },
+    "concat_cer_rescored": {
+      "ref_len": 3,
+      "errors": 1,
+      "sub": 1,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 33.33
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 3,
+      "entry_exact": 3,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 65,
+      "elapsed_seconds": 3.18
+    }
+  },
+  {
+    "paper_id": 23,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.1697,
+      "numerator": 1.0182,
+      "denominator": 6
+    },
+    "work_cer": {
+      "ref_len": 6,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 6,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 6,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 6,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 1,
+      "fp": 4,
+      "fn": 4,
+      "precision": 0.2,
+      "recall": 0.2,
+      "f1": 0.2,
+      "entries": 1,
+      "entry_exact": 0,
+      "entry_exact_rate": 0,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 97,
+      "elapsed_seconds": 3.62
+    }
+  },
+  {
+    "paper_id": 24,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.908,
+      "numerator": 9.0799,
+      "denominator": 10
+    },
+    "work_cer": {
+      "ref_len": 194,
+      "errors": 21,
+      "sub": 13,
+      "del": 4,
+      "ins": 4,
+      "cer_percent": 10.82
+    },
+    "work_cer_rescored": {
+      "ref_len": 194,
+      "errors": 21,
+      "sub": 13,
+      "del": 4,
+      "ins": 4,
+      "cer_percent": 10.82
+    },
+    "concat_cer": {
+      "ref_len": 194,
+      "errors": 21,
+      "sub": 13,
+      "del": 4,
+      "ins": 4,
+      "cer_percent": 10.82
+    },
+    "concat_cer_rescored": {
+      "ref_len": 194,
+      "errors": 21,
+      "sub": 13,
+      "del": 4,
+      "ins": 4,
+      "cer_percent": 10.82
+    },
+    "numbers": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 9,
+      "entry_exact": 9,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 328,
+      "elapsed_seconds": 5.76
+    }
+  },
+  {
+    "paper_id": 25,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.707,
+      "numerator": 2.8279,
+      "denominator": 4
+    },
+    "work_cer": {
+      "ref_len": 100,
+      "errors": 6,
+      "sub": 5,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 6
+    },
+    "work_cer_rescored": {
+      "ref_len": 100,
+      "errors": 6,
+      "sub": 5,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 6
+    },
+    "concat_cer": {
+      "ref_len": 100,
+      "errors": 6,
+      "sub": 5,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 6
+    },
+    "concat_cer_rescored": {
+      "ref_len": 100,
+      "errors": 6,
+      "sub": 5,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 6
+    },
+    "numbers": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 1,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75,
+      "entries": 3,
+      "entry_exact": 2,
+      "entry_exact_rate": 0.6667,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 158,
+      "elapsed_seconds": 3
+    }
+  },
+  {
+    "paper_id": 26,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.667,
+      "numerator": 3.3351,
+      "denominator": 5
+    },
+    "work_cer": {
+      "ref_len": 98,
+      "errors": 19,
+      "sub": 14,
+      "del": 2,
+      "ins": 3,
+      "cer_percent": 19.39
+    },
+    "work_cer_rescored": {
+      "ref_len": 98,
+      "errors": 19,
+      "sub": 14,
+      "del": 2,
+      "ins": 3,
+      "cer_percent": 19.39
+    },
+    "concat_cer": {
+      "ref_len": 98,
+      "errors": 19,
+      "sub": 14,
+      "del": 2,
+      "ins": 3,
+      "cer_percent": 19.39
+    },
+    "concat_cer_rescored": {
+      "ref_len": 98,
+      "errors": 19,
+      "sub": 14,
+      "del": 2,
+      "ins": 3,
+      "cer_percent": 19.39
+    },
+    "numbers": {
+      "tp": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 4,
+      "entry_exact": 4,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 213,
+      "elapsed_seconds": 3.57
+    }
+  },
+  {
+    "paper_id": 27,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.9298,
+      "numerator": 2.7894,
+      "denominator": 3
+    },
+    "work_cer": {
+      "ref_len": 109,
+      "errors": 4,
+      "sub": 2,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 3.67
+    },
+    "work_cer_rescored": {
+      "ref_len": 109,
+      "errors": 4,
+      "sub": 2,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 3.67
+    },
+    "concat_cer": {
+      "ref_len": 109,
+      "errors": 4,
+      "sub": 2,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 3.67
+    },
+    "concat_cer_rescored": {
+      "ref_len": 109,
+      "errors": 4,
+      "sub": 2,
+      "del": 2,
+      "ins": 0,
+      "cer_percent": 3.67
+    },
+    "numbers": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 2,
+      "entry_exact": 2,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 150,
+      "elapsed_seconds": 3.68
+    }
+  },
+  {
+    "paper_id": 28,
+    "status": "ok",
+    "entry_score": {
+      "score": 1,
+      "numerator": 2,
+      "denominator": 2
+    },
+    "work_cer": {
+      "ref_len": 14,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 14,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 14,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 14,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 1,
+      "entry_exact": 1,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 44,
+      "elapsed_seconds": 2.83
+    }
+  },
+  {
+    "paper_id": 29,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.95,
+      "numerator": 1.9,
+      "denominator": 2
+    },
+    "work_cer": {
+      "ref_len": 9,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "work_cer_rescored": {
+      "ref_len": 9,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer": {
+      "ref_len": 9,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "concat_cer_rescored": {
+      "ref_len": 9,
+      "errors": 0,
+      "sub": 0,
+      "del": 0,
+      "ins": 0,
+      "cer_percent": 0
+    },
+    "numbers": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 1,
+      "entry_exact": 1,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 69,
+      "elapsed_seconds": 2.42
+    }
+  },
+  {
+    "paper_id": 30,
+    "status": "ok",
+    "entry_score": {
+      "score": 0.8846,
+      "numerator": 1.7692,
+      "denominator": 2
+    },
+    "work_cer": {
+      "ref_len": 12,
+      "errors": 3,
+      "sub": 2,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 25
+    },
+    "work_cer_rescored": {
+      "ref_len": 12,
+      "errors": 3,
+      "sub": 2,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 25
+    },
+    "concat_cer": {
+      "ref_len": 12,
+      "errors": 3,
+      "sub": 2,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 25
+    },
+    "concat_cer_rescored": {
+      "ref_len": 12,
+      "errors": 3,
+      "sub": 2,
+      "del": 0,
+      "ins": 1,
+      "cer_percent": 25
+    },
+    "numbers": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "entries": 1,
+      "entry_exact": 1,
+      "entry_exact_rate": 1,
+      "abstain": {
+        "total": 0,
+        "correct": 0,
+        "missed_number": 0
+      }
+    },
+    "potential_merges": 0,
+    "generation": {
+      "attempts": 1,
+      "input_tokens": 6580,
+      "output_tokens": 56,
+      "elapsed_seconds": 2.97
+    }
+  }
+]

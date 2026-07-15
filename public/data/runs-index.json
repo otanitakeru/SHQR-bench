@@ -1,0 +1,72 @@
+[
+  {
+    "id": "claude__claude-fable-5",
+    "provider": "claude",
+    "model": "claude-fable-5"
+  },
+  {
+    "id": "claude__claude-haiku-4-5",
+    "provider": "claude",
+    "model": "claude-haiku-4-5"
+  },
+  {
+    "id": "claude__claude-opus-4-6",
+    "provider": "claude",
+    "model": "claude-opus-4-6"
+  },
+  {
+    "id": "claude__claude-opus-4-8",
+    "provider": "claude",
+    "model": "claude-opus-4-8"
+  },
+  {
+    "id": "claude__claude-sonnet-5",
+    "provider": "claude",
+    "model": "claude-sonnet-5"
+  },
+  {
+    "id": "chatgpt__gpt-5.4-mini",
+    "provider": "chatgpt",
+    "model": "gpt-5.4-mini"
+  },
+  {
+    "id": "chatgpt__gpt-5.4-nano",
+    "provider": "chatgpt",
+    "model": "gpt-5.4-nano"
+  },
+  {
+    "id": "chatgpt__gpt-5.5",
+    "provider": "chatgpt",
+    "model": "gpt-5.5"
+  },
+  {
+    "id": "chatgpt__gpt-5.6-luna",
+    "provider": "chatgpt",
+    "model": "gpt-5.6-luna"
+  },
+  {
+    "id": "chatgpt__gpt-5.6-sol",
+    "provider": "chatgpt",
+    "model": "gpt-5.6-sol"
+  },
+  {
+    "id": "chatgpt__gpt-5.6-terra",
+    "provider": "chatgpt",
+    "model": "gpt-5.6-terra"
+  },
+  {
+    "id": "gemini__gemini-3.1-flash-lite",
+    "provider": "gemini",
+    "model": "gemini-3.1-flash-lite"
+  },
+  {
+    "id": "gemini__gemini-3.1-pro-preview",
+    "provider": "gemini",
+    "model": "gemini-3.1-pro-preview"
+  },
+  {
+    "id": "gemini__gemini-3.5-flash",
+    "provider": "gemini",
+    "model": "gemini-3.5-flash"
+  }
+]

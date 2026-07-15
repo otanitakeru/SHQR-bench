@@ -1,0 +1,125 @@
+{
+  "run": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash"
+  },
+  "papers": {
+    "total_gt": 30,
+    "evaluated": 30,
+    "missing_files": [],
+    "null_results": []
+  },
+  "entry_score": {
+    "score": 0.8841,
+    "numerator": 167.9881,
+    "denominator": 190
+  },
+  "work_impressions": {
+    "detection": {
+      "precision": 0.9868,
+      "recall": 0.9313,
+      "f1": 0.9582
+    },
+    "perfect_entry": {
+      "count": 101,
+      "total_gt_entries": 160,
+      "rate": 0.6312
+    },
+    "cer": {
+      "ref_len": 3290,
+      "errors": 259,
+      "sub": 65,
+      "del": 97,
+      "ins": 97,
+      "cer_percent": 7.87
+    },
+    "cer_rescored": {
+      "ref_len": 3290,
+      "errors": 240,
+      "sub": 53,
+      "del": 92,
+      "ins": 95,
+      "cer_percent": 7.29
+    },
+    "cer_matched_only": {
+      "ref_len": 3233,
+      "errors": 185,
+      "sub": 65,
+      "del": 40,
+      "ins": 80,
+      "cer_percent": 5.72
+    },
+    "cer_matched_only_rescored": {
+      "ref_len": 3233,
+      "errors": 166,
+      "sub": 53,
+      "del": 35,
+      "ins": 78,
+      "cer_percent": 5.13
+    },
+    "concat_cer": {
+      "ref_len": 3290,
+      "errors": 184,
+      "sub": 70,
+      "del": 57,
+      "ins": 57,
+      "cer_percent": 5.59
+    },
+    "concat_cer_rescored": {
+      "ref_len": 3290,
+      "errors": 165,
+      "sub": 58,
+      "del": 52,
+      "ins": 55,
+      "cer_percent": 5.02
+    },
+    "matching": {
+      "pairs": 149,
+      "potential_merges": 3,
+      "missed_gt": 11,
+      "extra_pred": 2
+    }
+  },
+  "overall_impression": {
+    "anls_rescored_mean": 0.9639,
+    "cer": {
+      "ref_len": 1423,
+      "errors": 43,
+      "sub": 16,
+      "del": 9,
+      "ins": 18,
+      "cer_percent": 3.02
+    },
+    "cer_rescored": {
+      "ref_len": 1423,
+      "errors": 39,
+      "sub": 14,
+      "del": 8,
+      "ins": 17,
+      "cer_percent": 2.74
+    }
+  },
+  "numbers": {
+    "tp": 156,
+    "fp": 3,
+    "fn": 13,
+    "precision": 0.9811,
+    "recall": 0.9231,
+    "f1": 0.9512,
+    "entries": 149,
+    "entry_exact": 147,
+    "entry_exact_rate": 0.9866,
+    "abstain": {
+      "total": 1,
+      "correct": 0,
+      "missed_number": 1
+    },
+    "coverage": 0.9934
+  },
+  "generation": {
+    "attempts": 30,
+    "input_tokens": 107160,
+    "output_tokens": 48190,
+    "elapsed_seconds": 643.88
+  }
+}

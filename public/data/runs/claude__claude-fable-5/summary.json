@@ -1,0 +1,125 @@
+{
+  "run": {
+    "provider": "claude",
+    "model": "claude-fable-5"
+  },
+  "papers": {
+    "total_gt": 30,
+    "evaluated": 30,
+    "missing_files": [],
+    "null_results": []
+  },
+  "entry_score": {
+    "score": 0.9812,
+    "numerator": 186.4188,
+    "denominator": 190
+  },
+  "work_impressions": {
+    "detection": {
+      "precision": 1,
+      "recall": 1,
+      "f1": 1
+    },
+    "perfect_entry": {
+      "count": 132,
+      "total_gt_entries": 160,
+      "rate": 0.825
+    },
+    "cer": {
+      "ref_len": 3290,
+      "errors": 73,
+      "sub": 32,
+      "del": 19,
+      "ins": 22,
+      "cer_percent": 2.22
+    },
+    "cer_rescored": {
+      "ref_len": 3290,
+      "errors": 66,
+      "sub": 27,
+      "del": 19,
+      "ins": 20,
+      "cer_percent": 2.01
+    },
+    "cer_matched_only": {
+      "ref_len": 3290,
+      "errors": 73,
+      "sub": 32,
+      "del": 19,
+      "ins": 22,
+      "cer_percent": 2.22
+    },
+    "cer_matched_only_rescored": {
+      "ref_len": 3290,
+      "errors": 66,
+      "sub": 27,
+      "del": 19,
+      "ins": 20,
+      "cer_percent": 2.01
+    },
+    "concat_cer": {
+      "ref_len": 3290,
+      "errors": 73,
+      "sub": 32,
+      "del": 19,
+      "ins": 22,
+      "cer_percent": 2.22
+    },
+    "concat_cer_rescored": {
+      "ref_len": 3290,
+      "errors": 66,
+      "sub": 27,
+      "del": 19,
+      "ins": 20,
+      "cer_percent": 2.01
+    },
+    "matching": {
+      "pairs": 160,
+      "potential_merges": 0,
+      "missed_gt": 0,
+      "extra_pred": 0
+    }
+  },
+  "overall_impression": {
+    "anls_rescored_mean": 0.9859,
+    "cer": {
+      "ref_len": 1423,
+      "errors": 17,
+      "sub": 9,
+      "del": 2,
+      "ins": 6,
+      "cer_percent": 1.19
+    },
+    "cer_rescored": {
+      "ref_len": 1423,
+      "errors": 15,
+      "sub": 8,
+      "del": 1,
+      "ins": 6,
+      "cer_percent": 1.05
+    }
+  },
+  "numbers": {
+    "tp": 168,
+    "fp": 1,
+    "fn": 1,
+    "precision": 0.9941,
+    "recall": 0.9941,
+    "f1": 0.9941,
+    "entries": 160,
+    "entry_exact": 159,
+    "entry_exact_rate": 0.9938,
+    "abstain": {
+      "total": 0,
+      "correct": 0,
+      "missed_number": 0
+    },
+    "coverage": 1
+  },
+  "generation": {
+    "attempts": 30,
+    "input_tokens": 285600,
+    "output_tokens": 28798,
+    "elapsed_seconds": 559.02
+  }
+}

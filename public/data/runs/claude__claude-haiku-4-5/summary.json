@@ -1,0 +1,125 @@
+{
+  "run": {
+    "provider": "claude",
+    "model": "claude-haiku-4-5"
+  },
+  "papers": {
+    "total_gt": 30,
+    "evaluated": 30,
+    "missing_files": [],
+    "null_results": []
+  },
+  "entry_score": {
+    "score": 0.2495,
+    "numerator": 48.4068,
+    "denominator": 194
+  },
+  "work_impressions": {
+    "detection": {
+      "precision": 0.6903,
+      "recall": 0.4875,
+      "f1": 0.5714
+    },
+    "perfect_entry": {
+      "count": 10,
+      "total_gt_entries": 160,
+      "rate": 0.0625
+    },
+    "cer": {
+      "ref_len": 3290,
+      "errors": 3150,
+      "sub": 467,
+      "del": 1801,
+      "ins": 882,
+      "cer_percent": 95.74
+    },
+    "cer_rescored": {
+      "ref_len": 3290,
+      "errors": 3145,
+      "sub": 462,
+      "del": 1801,
+      "ins": 882,
+      "cer_percent": 95.59
+    },
+    "cer_matched_only": {
+      "ref_len": 1647,
+      "errors": 765,
+      "sub": 467,
+      "del": 158,
+      "ins": 140,
+      "cer_percent": 46.45
+    },
+    "cer_matched_only_rescored": {
+      "ref_len": 1647,
+      "errors": 760,
+      "sub": 462,
+      "del": 158,
+      "ins": 140,
+      "cer_percent": 46.14
+    },
+    "concat_cer": {
+      "ref_len": 3290,
+      "errors": 2203,
+      "sub": 1042,
+      "del": 1040,
+      "ins": 121,
+      "cer_percent": 66.96
+    },
+    "concat_cer_rescored": {
+      "ref_len": 3290,
+      "errors": 2198,
+      "sub": 1037,
+      "del": 1040,
+      "ins": 121,
+      "cer_percent": 66.81
+    },
+    "matching": {
+      "pairs": 78,
+      "potential_merges": 3,
+      "missed_gt": 82,
+      "extra_pred": 35
+    }
+  },
+  "overall_impression": {
+    "anls_rescored_mean": 0.4468,
+    "cer": {
+      "ref_len": 1423,
+      "errors": 1008,
+      "sub": 404,
+      "del": 198,
+      "ins": 406,
+      "cer_percent": 70.84
+    },
+    "cer_rescored": {
+      "ref_len": 1423,
+      "errors": 1008,
+      "sub": 404,
+      "del": 198,
+      "ins": 406,
+      "cer_percent": 70.84
+    }
+  },
+  "numbers": {
+    "tp": 73,
+    "fp": 62,
+    "fn": 96,
+    "precision": 0.5407,
+    "recall": 0.432,
+    "f1": 0.4803,
+    "entries": 78,
+    "entry_exact": 67,
+    "entry_exact_rate": 0.859,
+    "abstain": {
+      "total": 1,
+      "correct": 0,
+      "missed_number": 0
+    },
+    "coverage": 0.9912
+  },
+  "generation": {
+    "attempts": 30,
+    "input_tokens": 183480,
+    "output_tokens": 6930,
+    "elapsed_seconds": 158.02
+  }
+}
