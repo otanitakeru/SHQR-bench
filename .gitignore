@@ -16,6 +16,9 @@ dist-ssr
 # evaluation project not meant to be referenced from the public repo
 scripts/
 
+# Claude Code local tooling config (e.g. browser preview launch settings)
+.claude/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
