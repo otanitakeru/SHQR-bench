@@ -24,14 +24,17 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100">
-      <header className="border-b border-neutral-200 dark:border-neutral-800 px-6 py-4">
-        <h1 className="text-xl font-semibold">
-          SHQR Bench <span className="font-normal text-neutral-400">(Structured Handwritten Questionnaire Recognition)</span>
+      <header className="border-b border-neutral-200 dark:border-neutral-800 px-4 sm:px-6 py-4">
+        <h1 className="text-lg sm:text-xl font-semibold">
+          SHQR Bench{' '}
+          <span className="hidden sm:inline font-normal text-neutral-400">
+            (Structured Handwritten Questionnaire Recognition)
+          </span>
         </h1>
         <p className="text-sm text-neutral-500 dark:text-neutral-400">
           Questionnaire OCR/extraction benchmark results across models
         </p>
-        <nav className="flex gap-4 mt-3">
+        <nav className="flex gap-4 mt-3 overflow-x-auto">
           <TabButton active={tab === 'overview'} onClick={() => setTab('overview')}>
             Overview
           </TabButton>
@@ -44,7 +47,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="px-6 py-6 max-w-6xl mx-auto flex flex-col gap-6">
+      <main className="px-4 sm:px-6 py-6 max-w-6xl mx-auto flex flex-col gap-6">
         {error && <p className="text-sm text-red-500">Failed to load comparison.csv: {error}</p>}
         {!rows && !error && <p className="text-sm text-neutral-500">Loading...</p>}
 

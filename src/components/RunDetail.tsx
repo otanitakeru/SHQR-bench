@@ -9,6 +9,7 @@ import {
 } from 'recharts'
 import type { ComparisonRow, RunIndexEntry } from '../types'
 import { useRunDetail } from '../hooks/useRunDetail'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 interface Props {
   runs: RunIndexEntry[]
@@ -19,6 +20,7 @@ interface Props {
 
 export function RunDetail({ runs, comparisonRows, selectedRunId, onSelectRun }: Props) {
   const { summary, perPaper, error } = useRunDetail(selectedRunId)
+  const isMobile = useIsMobile()
 
   const selectedRun = runs.find((r) => r.id === selectedRunId)
   const cost = comparisonRows.find(
@@ -30,6 +32,10 @@ export function RunDetail({ runs, comparisonRows, selectedRunId, onSelectRun }: 
     entry_score: p.entry_score.score,
     cer_percent: p.work_cer.cer_percent,
   }))
+  // Cap the number of visible x-axis ticks so labels don't overlap on
+  // narrow screens or when there are many papers.
+  const maxTicks = isMobile ? 10 : 20
+  const tickInterval = chartData ? Math.max(0, Math.ceil(chartData.length / maxTicks) - 1) : 0
 
   return (
     <div className="flex flex-col gap-4">
@@ -119,8 +125,15 @@ export function RunDetail({ runs, comparisonRows, selectedRunId, onSelectRun }: 
           <ResponsiveContainer width="100%" height={280}>
             <BarChart data={chartData}>
               <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
-              <XAxis dataKey="paper" tick={{ fontSize: 10 }} interval={0} angle={-45} textAnchor="end" height={50} />
-              <YAxis domain={[0, 1]} tick={{ fontSize: 11 }} />
+              <XAxis
+                dataKey="paper"
+                tick={{ fontSize: 10 }}
+                interval={tickInterval}
+                angle={-45}
+                textAnchor="end"
+                height={50}
+              />
+              <YAxis domain={[0, 1]} tick={{ fontSize: 11 }} width={36} />
               <Tooltip formatter={(v) => Number(v).toFixed(3)} contentStyle={{ fontSize: 12 }} />
               <Bar dataKey="entry_score" fill="#6366f1" radius={[4, 4, 0, 0]} />
             </BarChart>

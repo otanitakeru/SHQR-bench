@@ -10,6 +10,7 @@ import {
 } from 'recharts'
 import type { ComparisonRow } from '../types'
 import { DEFAULT_COLOR, PROVIDER_COLORS } from '../lib/colors'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 interface Props {
   rows: ComparisonRow[]
@@ -21,6 +22,7 @@ interface Props {
 }
 
 export function MetricBarChart({ rows, metricKey, title, better, formatValue }: Props) {
+  const isMobile = useIsMobile()
   const data = rows
     .map((row) => ({
       name: row.model,
@@ -35,19 +37,19 @@ export function MetricBarChart({ rows, metricKey, title, better, formatValue }: 
         {title}
         <span className="ml-1 text-neutral-400">{better === 'higher' ? '↑' : '↓'}</span>
       </h3>
-      <ResponsiveContainer width="100%" height={360}>
-        <BarChart data={data} margin={{ top: 8, right: 8, bottom: 56, left: 8 }}>
+      <ResponsiveContainer width="100%" height={isMobile ? 320 : 360}>
+        <BarChart data={data} margin={{ top: 8, right: 8, bottom: isMobile ? 70 : 56, left: 0 }}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} className="opacity-30" />
           <XAxis
             type="category"
             dataKey="name"
-            tick={{ fontSize: 11 }}
+            tick={{ fontSize: isMobile ? 9 : 11 }}
             interval={0}
             angle={-45}
             textAnchor="end"
-            height={70}
+            height={isMobile ? 84 : 70}
           />
-          <YAxis type="number" tick={{ fontSize: 11 }} />
+          <YAxis type="number" tick={{ fontSize: isMobile ? 10 : 11 }} width={36} />
           <Tooltip
             formatter={(v) => (formatValue ? formatValue(Number(v)) : Number(v).toFixed(3))}
             contentStyle={{ fontSize: 12 }}

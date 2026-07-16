@@ -12,6 +12,7 @@ import {
 } from 'recharts'
 import type { ComparisonRow } from '../types'
 import { DEFAULT_COLOR, PROVIDER_COLORS } from '../lib/colors'
+import { useIsMobile } from '../hooks/useIsMobile'
 
 interface Props {
   rows: ComparisonRow[]
@@ -19,26 +20,36 @@ interface Props {
 
 export function CostVsScoreScatter({ rows }: Props) {
   const providers = [...new Set(rows.map((r) => String(r.provider)))]
+  const isMobile = useIsMobile()
+  const fontSize = isMobile ? 11 : 13
+  const labelFontSize = isMobile ? 12 : 14
 
   return (
     <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4">
       <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-3">
         Cost per Paper vs Entry Score
       </h3>
-      <ResponsiveContainer width="100%" height={760} className="[&_svg]:outline-none [&_*]:focus:outline-none">
-        <ScatterChart accessibilityLayer={false} margin={{ top: 16, right: 56, bottom: 56, left: 56 }}>
+      <ResponsiveContainer
+        width="100%"
+        height={isMobile ? 520 : 760}
+        className="[&_svg]:outline-none [&_*]:focus:outline-none"
+      >
+        <ScatterChart
+          accessibilityLayer={false}
+          margin={{ top: 16, right: isMobile ? 16 : 56, bottom: isMobile ? 48 : 56, left: isMobile ? 40 : 56 }}
+        >
           <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
           <XAxis
             type="number"
             dataKey="cost_usd_per_paper"
             name="Cost per Paper"
             unit="$"
-            tick={{ fontSize: 13 }}
+            tick={{ fontSize }}
             label={{
-              value: 'Cost per Paper (USD, lower is better)',
+              value: isMobile ? 'Cost per Paper (USD)' : 'Cost per Paper (USD, lower is better)',
               position: 'bottom',
-              offset: 24,
-              fontSize: 14,
+              offset: isMobile ? 16 : 24,
+              fontSize: labelFontSize,
             }}
           />
           <YAxis
@@ -47,14 +58,14 @@ export function CostVsScoreScatter({ rows }: Props) {
             name="Entry Score"
             domain={[0.6, 1]}
             allowDataOverflow
-            width={70}
-            tick={{ fontSize: 13 }}
+            width={isMobile ? 50 : 70}
+            tick={{ fontSize }}
             label={{
-              value: 'Entry Score (higher is better)',
+              value: isMobile ? 'Entry Score' : 'Entry Score (higher is better)',
               angle: -90,
               position: 'insideLeft',
-              offset: -24,
-              fontSize: 14,
+              offset: isMobile ? -16 : -24,
+              fontSize: labelFontSize,
             }}
           />
           <ZAxis range={[220, 220]} />
@@ -75,7 +86,11 @@ export function CostVsScoreScatter({ rows }: Props) {
               )
             }}
           />
-          <Legend verticalAlign="top" height={32} wrapperStyle={{ fontSize: 14 }} />
+          <Legend
+            verticalAlign="top"
+            height={isMobile ? 52 : 32}
+            wrapperStyle={{ fontSize: labelFontSize }}
+          />
           {providers.map((provider) => (
             <Scatter
               key={provider}
@@ -87,8 +102,8 @@ export function CostVsScoreScatter({ rows }: Props) {
               <LabelList
                 dataKey="model"
                 position="right"
-                offset={8}
-                fontSize={12}
+                offset={isMobile ? 6 : 8}
+                fontSize={isMobile ? 10 : 12}
                 className="fill-neutral-700 dark:fill-neutral-300"
               />
             </Scatter>
