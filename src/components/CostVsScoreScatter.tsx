@@ -66,6 +66,7 @@ export function CostVsScoreScatter({ rows }: Props) {
               position: 'insideLeft',
               offset: isMobile ? -4 : -24,
               fontSize: labelFontSize,
+              style: { textAnchor: 'middle' },
             }}
           />
           <ZAxis range={[220, 220]} />
