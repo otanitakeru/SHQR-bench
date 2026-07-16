@@ -1,17 +1,11 @@
+import { MathFormula } from './MathFormula'
+
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 sm:p-6 flex flex-col gap-3">
       <h2 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">{title}</h2>
       {children}
     </section>
-  )
-}
-
-function Formula({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="overflow-x-auto rounded bg-neutral-50 dark:bg-neutral-900 px-4 py-3 text-sm font-mono whitespace-pre">
-      {children}
-    </div>
   )
 }
 
@@ -94,9 +88,7 @@ export function MetricsGuide() {
         <p className="text-sm text-neutral-700 dark:text-neutral-300">
           「抽出結果のうち、人手修正なしで使える割合」を表す総合スコアです。用紙ごとに以下の式で計算し、モデル全体では各用紙の分子・分母を合算してから割ります。
         </p>
-        <Formula>{`         Σ_ペア [ ANLS(感想文) × Jaccard(番号) ] + ANLS(全体感想)
-Score = ────────────────────────────────────────────────────
-                    max(GT件数, 予測件数) + 1`}</Formula>
+        <MathFormula tex={String.raw`\text{Score} = \dfrac{\displaystyle\sum_{\text{ペア}} \left[\, \text{ANLS(感想文)} \times \text{Jaccard(番号)} \,\right] \;+\; \text{ANLS(全体感想)}}{\max(\text{GT件数},\ \text{予測件数}) + 1}`} />
         <ul className="text-sm text-neutral-700 dark:text-neutral-300 flex flex-col gap-2 list-disc list-inside">
           <li>
             <span className="font-medium">ANLS</span> = 1 − 正規化編集距離(rescored後のテキスト同士)。0.5以下は0点に切り捨て、明らかな誤読には部分点を与えない
@@ -140,7 +132,9 @@ Score = ────────────────────────
             </tbody>
           </table>
         </div>
-        <Formula>{`Score = (1.0 + 0 + 0 + 1.0 + 1.0) ÷ (max(5, 5) + 1) = 3.0 / 6 = 0.50`}</Formula>
+        <MathFormula
+          tex={String.raw`\text{Score} = \dfrac{1.0 + 0 + 0 + 1.0 + 1.0}{\max(5, 5) + 1} = \dfrac{3.0}{6} = 0.50`}
+        />
       </Section>
 
       <Section title="診断指標(スコアが低い理由を調べる)">
