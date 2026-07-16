@@ -25,8 +25,8 @@ export function CostVsScoreScatter({ rows }: Props) {
   const labelFontSize = isMobile ? 12 : 14
 
   return (
-    <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4">
-      <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-3">
+    <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-2 sm:p-4">
+      <h3 className="text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2 sm:mb-3">
         Cost per Paper vs Entry Score
       </h3>
       <ResponsiveContainer
@@ -36,7 +36,7 @@ export function CostVsScoreScatter({ rows }: Props) {
       >
         <ScatterChart
           accessibilityLayer={false}
-          margin={{ top: 16, right: isMobile ? 16 : 56, bottom: isMobile ? 48 : 56, left: isMobile ? 40 : 56 }}
+          margin={{ top: 16, right: isMobile ? 12 : 56, bottom: isMobile ? 40 : 56, left: isMobile ? 12 : 56 }}
         >
           <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
           <XAxis
@@ -58,13 +58,13 @@ export function CostVsScoreScatter({ rows }: Props) {
             name="Entry Score"
             domain={[0.6, 1]}
             allowDataOverflow
-            width={isMobile ? 50 : 70}
+            width={isMobile ? 34 : 70}
             tick={{ fontSize }}
             label={{
               value: isMobile ? 'Entry Score' : 'Entry Score (higher is better)',
               angle: -90,
               position: 'insideLeft',
-              offset: isMobile ? -16 : -24,
+              offset: isMobile ? -4 : -24,
               fontSize: labelFontSize,
             }}
           />
