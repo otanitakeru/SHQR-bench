@@ -5,8 +5,9 @@ import { Leaderboard } from './components/Leaderboard'
 import { MetricBarChart } from './components/MetricBarChart'
 import { CostVsScoreScatter } from './components/CostVsScoreScatter'
 import { RunDetail } from './components/RunDetail'
+import { MetricsGuide } from './components/MetricsGuide'
 
-type Tab = 'overview' | 'metrics' | 'detail'
+type Tab = 'overview' | 'metrics' | 'detail' | 'guide'
 
 function App() {
   const { rows, error } = useComparison()
@@ -43,6 +44,9 @@ function App() {
           </TabButton>
           <TabButton active={tab === 'detail'} onClick={() => setTab('detail')}>
             Run Detail
+          </TabButton>
+          <TabButton active={tab === 'guide'} onClick={() => setTab('guide')}>
+            指標について
           </TabButton>
         </nav>
       </header>
@@ -90,6 +94,8 @@ function App() {
             onSelectRun={setSelectedRunId}
           />
         )}
+
+        {tab === 'guide' && <MetricsGuide />}
       </main>
     </div>
   )
