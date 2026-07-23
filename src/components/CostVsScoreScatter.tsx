@@ -68,6 +68,12 @@ function niceScoreDomain([dataMin, dataMax]: readonly [number, number]): [
   return [niceMin, niceMax];
 }
 
+/** Fixed-radius circle dot; ZAxis's `range` only takes effect when paired with a `dataKey`, so size is set directly here instead. */
+function ScatterDot({ cx, cy, fill }: { cx?: number; cy?: number; fill?: string }) {
+  if (cx == null || cy == null) return null
+  return <circle cx={cx} cy={cy} r={6.5} fill={fill} />
+}
+
 function orderProviders(providers: string[]) {
   const known = PROVIDER_ORDER.filter((p) => providers.includes(p));
   const unknown = providers.filter((p) => !PROVIDER_ORDER.includes(p));
@@ -288,6 +294,7 @@ export function CostVsScoreScatter({ rows }: Props) {
               )}
               fill={PROVIDER_COLORS[provider] ?? DEFAULT_COLOR}
               isAnimationActive={false}
+              shape={ScatterDot}
             />
           ))}
           <ModelLabels rows={visibleRows} isMobile={isMobile} />
