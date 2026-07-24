@@ -37,6 +37,7 @@ const MODEL_ORDER = [
   "gemini-3.1-pro-preview",
   "gemini-3.6-flash",
   "gemini-3.5-flash",
+  "gemini-3.5-flash-lite",
   "gemini-3.1-flash-lite",
 ];
 
@@ -47,6 +48,7 @@ const DEFAULT_HIDDEN_MODELS = [
   "claude-opus-4-6",
   "claude-haiku-4-5",
   "gemini-3.5-flash",
+  "gemini-3.1-flash-lite",
 ];
 
 const PROVIDER_ORDER = ["chatgpt", "claude", "gemini"];
@@ -69,9 +71,17 @@ function niceScoreDomain([dataMin, dataMax]: readonly [number, number]): [
 }
 
 /** Fixed-radius circle dot; ZAxis's `range` only takes effect when paired with a `dataKey`, so size is set directly here instead. */
-function ScatterDot({ cx, cy, fill }: { cx?: number; cy?: number; fill?: string }) {
-  if (cx == null || cy == null) return null
-  return <circle cx={cx} cy={cy} r={6.5} fill={fill} />
+function ScatterDot({
+  cx,
+  cy,
+  fill,
+}: {
+  cx?: number;
+  cy?: number;
+  fill?: string;
+}) {
+  if (cx == null || cy == null) return null;
+  return <circle cx={cx} cy={cy} r={6.5} fill={fill} />;
 }
 
 function orderProviders(providers: string[]) {
@@ -223,7 +233,7 @@ export function CostVsScoreScatter({ rows }: Props) {
             dataKey="cost_usd_per_paper"
             name="Cost per Paper"
             unit="$"
-            domain={['auto', 'auto']}
+            domain={["auto", "auto"]}
             niceTicks="snap125"
             tickCount={4}
             padding={{ right: isMobile ? 60 : 100 }}
