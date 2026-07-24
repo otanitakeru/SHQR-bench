@@ -51,7 +51,7 @@ function App() {
         </nav>
       </header>
 
-      <main className="px-4 sm:px-6 py-6 max-w-6xl mx-auto flex flex-col gap-6">
+      <main className="px-2 sm:px-6 py-6 max-w-6xl mx-auto flex flex-col gap-6">
         {error && <p className="text-sm text-red-500">Failed to load comparison.csv: {error}</p>}
         {!rows && !error && <p className="text-sm text-neutral-500">Loading...</p>}
 

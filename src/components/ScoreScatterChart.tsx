@@ -16,7 +16,11 @@ import {
 } from "recharts";
 import { useIsMobile } from "../hooks/useIsMobile";
 import { DEFAULT_COLOR, PROVIDER_COLORS } from "../lib/colors";
-import { getMetricOption, metricValue, type MetricKey } from "../lib/metricOptions";
+import {
+  getMetricOption,
+  metricValue,
+  type MetricKey,
+} from "../lib/metricOptions";
 import type { ComparisonRow } from "../types";
 
 interface Props {
@@ -69,7 +73,9 @@ function niceAxisDomain(capMax: number | undefined) {
     const ticks = getNiceTickValues([dataMin, dataMax], 5, true, "snap125");
     const niceMin = ticks[0];
     const niceMax =
-      capMax != null ? Math.min(capMax, ticks[ticks.length - 1]) : ticks[ticks.length - 1];
+      capMax != null
+        ? Math.min(capMax, ticks[ticks.length - 1])
+        : ticks[ticks.length - 1];
     return [niceMin, niceMax];
   };
 }
@@ -112,22 +118,55 @@ function ModelLabels({
   if (!xScale || !yScale) return null;
 
   const labelFontSize = isMobile ? 15 : 17;
-  const offsetX = isMobile ? 6 : 8;
-  const estCharWidth = labelFontSize * 0.58;
+  const offsetX = isMobile ? 8 : 8;
+  const estCharWidth = labelFontSize * 0.45;
   const estHeight = labelFontSize + 6;
   const minY = plotArea ? plotArea.y + estHeight / 2 : -Infinity;
   const maxY = plotArea
     ? plotArea.y + plotArea.height - estHeight / 2
     : Infinity;
 
-  const placed: { left: number; right: number; top: number; bottom: number }[] =
-    [];
-  const labels = rows.map((row) => {
+  const minX = plotArea ? plotArea.x : -Infinity;
+  const maxX = plotArea ? plotArea.x + plotArea.width : Infinity;
+
+  type Box = { left: number; right: number; top: number; bottom: number };
+  const intersects = (a: Box, b: Box) =>
+    !(
+      a.right < b.left ||
+      a.left > b.right ||
+      a.bottom < b.top ||
+      a.top > b.bottom
+    );
+
+  // Every point's dot is an obstacle too, not just other labels, so a label
+  // nudged vertically to dodge one label doesn't land on top of a different dot.
+  const dotRadius = 6.5;
+  const dotBoxes: Box[] = rows.map((row) => {
+    const dcx = xScale(metricValue(row, xKey)) ?? 0;
+    const dcy = yScale(metricValue(row, yKey)) ?? 0;
+    return {
+      left: dcx - dotRadius,
+      right: dcx + dotRadius,
+      top: dcy - dotRadius,
+      bottom: dcy + dotRadius,
+    };
+  });
+
+  const placed: Box[] = [];
+  const labels = rows.map((row, i) => {
     const cx = xScale(metricValue(row, xKey)) ?? 0;
     const cy = yScale(metricValue(row, yKey)) ?? 0;
     const width = row.model.length * estCharWidth + 8;
-    const left = cx + offsetX;
+    const needed = width + offsetX;
+    const spaceRight = maxX - cx;
+    const spaceLeft = cx - minX;
+    // Prefer the right side; fall back to the left only when it actually
+    // has more room, so a clamp never forces the label into the dot.
+    const placeLeft = spaceRight < needed && spaceLeft > spaceRight;
+    const left = placeLeft ? cx - offsetX - width : cx + offsetX;
     const right = left + width;
+    // Every dot except this label's own (which always sits right beside it).
+    const otherDots = dotBoxes.filter((_, j) => j !== i);
 
     let dy = 0;
     let found = false;
@@ -137,15 +176,10 @@ function ModelLabels({
         const centerY = Math.min(Math.max(cy + candidate, minY), maxY);
         const top = centerY - estHeight / 2;
         const bottom = top + estHeight;
-        const overlaps = placed.some(
-          (box) =>
-            !(
-              right < box.left ||
-              left > box.right ||
-              bottom < box.top ||
-              top > box.bottom
-            ),
-        );
+        const box = { left, right, top, bottom };
+        const overlaps =
+          placed.some((b) => intersects(box, b)) ||
+          otherDots.some((b) => intersects(box, b));
         if (!overlaps) {
           dy = centerY - cy;
           found = true;
@@ -205,8 +239,8 @@ export function ScoreScatterChart({ rows, xKey, yKey, title }: Props) {
     () => new Set(defaultHidden),
   );
   const isMobile = useIsMobile();
-  const fontSize = isMobile ? 16 : 18;
-  const labelFontSize = isMobile ? 18 : 20;
+  const fontSize = isMobile ? 10 : 18;
+  const labelFontSize = isMobile ? 12 : 20;
   const visibleRows = rows.filter((r) => !hiddenModels.has(r.model));
 
   function toggleModel(model: string) {
@@ -231,10 +265,10 @@ export function ScoreScatterChart({ rows, xKey, yKey, title }: Props) {
         <ScatterChart
           accessibilityLayer={false}
           margin={{
-            top: 16,
-            right: isMobile ? 72 : 140,
-            bottom: isMobile ? 48 : 64,
-            left: isMobile ? 12 : 56,
+            top: 5,
+            right: isMobile ? 0 : 140,
+            bottom: isMobile ? 0 : 64,
+            left: isMobile ? 0 : 56,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" className="opacity-30" />
@@ -246,16 +280,18 @@ export function ScoreScatterChart({ rows, xKey, yKey, title }: Props) {
             domain={niceAxisDomain(xOption.capMax)}
             niceTicks="snap125"
             tickCount={4}
-            padding={{ right: isMobile ? 60 : 100 }}
+            padding={{ right: isMobile ? 30 : 100 }}
             tick={{ fontSize }}
-            label={{
-              value: isMobile
-                ? xOption.shortLabel
-                : `${xOption.label} (${xOption.better === "lower" ? "lower is better" : "higher is better"})`,
-              position: "bottom",
-              offset: isMobile ? 20 : 30,
-              fontSize: labelFontSize,
-            }}
+            label={
+              isMobile
+                ? undefined
+                : {
+                    value: `${xOption.label} (${xOption.better === "lower" ? "lower is better" : "higher is better"})`,
+                    position: "bottom",
+                    offset: 30,
+                    fontSize: labelFontSize,
+                  }
+            }
           />
           <YAxis
             type="number"
@@ -264,18 +300,20 @@ export function ScoreScatterChart({ rows, xKey, yKey, title }: Props) {
             unit={yOption.unit}
             domain={niceAxisDomain(yOption.capMax)}
             niceTicks="snap125"
-            width={isMobile ? 46 : 84}
+            width={isMobile ? 30 : 84}
             tick={{ fontSize }}
-            label={{
-              value: isMobile
-                ? yOption.shortLabel
-                : `${yOption.label} (${yOption.better === "lower" ? "lower is better" : "higher is better"})`,
-              angle: -90,
-              position: "insideLeft",
-              offset: isMobile ? -4 : -24,
-              fontSize: labelFontSize,
-              style: { textAnchor: "middle" },
-            }}
+            label={
+              isMobile
+                ? undefined
+                : {
+                    value: `${yOption.label} (${yOption.better === "lower" ? "lower is better" : "higher is better"})`,
+                    angle: -90,
+                    position: "insideLeft",
+                    offset: -24,
+                    fontSize: labelFontSize,
+                    style: { textAnchor: "middle" },
+                  }
+            }
           />
           <ZAxis range={[220, 220]} />
           <Tooltip
@@ -299,7 +337,7 @@ export function ScoreScatterChart({ rows, xKey, yKey, title }: Props) {
           />
           <Legend
             verticalAlign="top"
-            height={isMobile ? 64 : 44}
+            height={isMobile ? 44 : 44}
             wrapperStyle={{ fontSize: labelFontSize }}
           />
           {[...new Set(rows.map((r) => r.provider))].map((provider) => (
@@ -314,9 +352,23 @@ export function ScoreScatterChart({ rows, xKey, yKey, title }: Props) {
               shape={ScatterDot}
             />
           ))}
-          <ModelLabels rows={visibleRows} xKey={xKey} yKey={yKey} isMobile={isMobile} />
+          <ModelLabels
+            rows={visibleRows}
+            xKey={xKey}
+            yKey={yKey}
+            isMobile={isMobile}
+          />
         </ScatterChart>
       </ResponsiveContainer>
+
+      <div className="sm:hidden flex flex-col gap-0.5 text-xs text-neutral-500 dark:text-neutral-400 mt-0 mb-6">
+        <span>
+          Y軸: {yOption.label} {yOption.better === "lower" ? "↓" : "↑"}
+        </span>
+        <span>
+          X軸: {xOption.label} {xOption.better === "lower" ? "↓" : "↑"}
+        </span>
+      </div>
 
       <div className="flex items-center justify-between mt-3 mb-2">
         <h4 className="text-sm sm:text-base font-medium text-neutral-700 dark:text-neutral-300">
