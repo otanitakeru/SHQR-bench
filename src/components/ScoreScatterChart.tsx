@@ -163,30 +163,35 @@ function ModelLabels({
     // Prefer the right side; fall back to the left only when it actually
     // has more room, so a clamp never forces the label into the dot.
     const placeLeft = spaceRight < needed && spaceLeft > spaceRight;
-    const left = placeLeft ? cx - offsetX - width : cx + offsetX;
+    let left = placeLeft ? cx - offsetX - width : cx + offsetX;
+    // Priority 1: never render past the plot edge, no matter what.
+    left = Math.max(minX, Math.min(left, maxX - width));
     const right = left + width;
     // Every dot except this label's own (which always sits right beside it).
     const otherDots = dotBoxes.filter((_, j) => j !== i);
 
-    let dy = 0;
-    let found = false;
-    for (let step = 0; step <= 24 && !found; step++) {
-      const candidates = step === 0 ? [0] : [step * 6, -step * 6];
-      for (const candidate of candidates) {
-        const centerY = Math.min(Math.max(cy + candidate, minY), maxY);
-        const top = centerY - estHeight / 2;
-        const bottom = top + estHeight;
-        const box = { left, right, top, bottom };
-        const overlaps =
-          placed.some((b) => intersects(box, b)) ||
-          otherDots.some((b) => intersects(box, b));
-        if (!overlaps) {
-          dy = centerY - cy;
-          found = true;
-          break;
+    // Search for a vertical offset (always clamped inside the plot, so
+    // priority 1 holds by construction) satisfying the given overlap rule.
+    const findDy = (avoidDots: boolean): number | null => {
+      for (let step = 0; step <= 24; step++) {
+        const candidates = step === 0 ? [0] : [step * 6, -step * 6];
+        for (const candidate of candidates) {
+          const centerY = Math.min(Math.max(cy + candidate, minY), maxY);
+          const top = centerY - estHeight / 2;
+          const bottom = top + estHeight;
+          const box = { left, right, top, bottom };
+          const overlapsLabels = placed.some((b) => intersects(box, b));
+          const overlapsDots = avoidDots && otherDots.some((b) => intersects(box, b));
+          if (!overlapsLabels && !overlapsDots) return centerY - cy;
         }
       }
-    }
+      return null;
+    };
+
+    // Priority 2 + 3: dodge other labels and other dots.
+    // Priority 2 only: dodge labels even if it means sitting on a dot.
+    // Fallback: no free spot either way, so just render in place as before.
+    const dy = findDy(true) ?? findDy(false) ?? 0;
     const ly = Math.min(Math.max(cy + dy, minY), maxY);
     placed.push({
       left,
