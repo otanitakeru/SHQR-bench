@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useComparison } from './hooks/useComparison'
 import { useRunsIndex } from './hooks/useRunsIndex'
 import { Leaderboard } from './components/Leaderboard'
-import { MetricBarChart } from './components/MetricBarChart'
+import { MetricScatterChart } from './components/MetricScatterChart'
 import { CostVsScoreScatter } from './components/CostVsScoreScatter'
 import { RunDetail } from './components/RunDetail'
 import { MetricsGuide } from './components/MetricsGuide'
@@ -60,29 +60,7 @@ function App() {
         {rows && tab === 'metrics' && (
           <>
             <Leaderboard rows={rows} selectedModel={selectedModel} onSelectModel={selectModel} />
-            <div className="flex flex-col gap-4">
-              <MetricBarChart rows={rows} metricKey="entry_score" title="Entry Score" better="higher" />
-              <MetricBarChart
-                rows={rows}
-                metricKey="work_cer_matched_only_rescored"
-                title="Character Error Rate % (matched)"
-                better="lower"
-                formatValue={(v) => `${v.toFixed(2)}%`}
-              />
-              <MetricBarChart
-                rows={rows}
-                metricKey="detection_f1"
-                title="Detection F1"
-                better="higher"
-              />
-              <MetricBarChart
-                rows={rows}
-                metricKey="cost_usd_per_paper"
-                title="Cost per Paper (USD)"
-                better="lower"
-                formatValue={(v) => `$${v.toFixed(4)}`}
-              />
-            </div>
+            <MetricScatterChart rows={rows} />
           </>
         )}
 
