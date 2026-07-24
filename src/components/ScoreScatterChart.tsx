@@ -38,6 +38,7 @@ const MODEL_ORDER = [
   "gpt-5.4-mini",
   "gpt-5.4-nano",
   "claude-fable-5",
+  "claude-opus-5",
   "claude-opus-4-8",
   "claude-opus-4-6",
   "claude-sonnet-5",
@@ -53,6 +54,7 @@ const DEFAULT_HIDDEN_MODELS = [
   "gpt-5.6-terra",
   "gpt-5.6-luna",
   "gpt-5.4-nano",
+  "claude-opus-4-8",
   "claude-opus-4-6",
   "claude-haiku-4-5",
   "gemini-3.5-flash",
@@ -181,7 +183,8 @@ function ModelLabels({
           const bottom = top + estHeight;
           const box = { left, right, top, bottom };
           const overlapsLabels = placed.some((b) => intersects(box, b));
-          const overlapsDots = avoidDots && otherDots.some((b) => intersects(box, b));
+          const overlapsDots =
+            avoidDots && otherDots.some((b) => intersects(box, b));
           if (!overlapsLabels && !overlapsDots) return centerY - cy;
         }
       }
